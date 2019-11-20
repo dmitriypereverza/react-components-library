@@ -10,7 +10,7 @@ const stories = storiesOf('Components', module);
 stories.addDecorator(withKnobs);
 stories.add(
   'Typography',
-  () => <Typography type={"regularBody1"}>{text("Text", "Тестовый текст")}</Typography>,
+  () => <Typography type={"regularBody1"}>{text("Text", "Тестовый текст111")}</Typography>,
   { info: { text: 'sdfsdf sd fsdf' } }
 );
 
