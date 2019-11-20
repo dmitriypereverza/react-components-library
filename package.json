@@ -1,9 +1,21 @@
 {
   "name": "storybookws",
   "version": "1.0.0",
+  "homepage": "https://dmitriypereverza.github.io/react-components-library",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
+  "scripts": {
+    "storybook": "start-storybook",
+    "build": "build-storybook -o ./build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-notes": "^5.2.6",
+    "@types/node": "^12.12.11",
+    "@types/react": "^16.9.11",
     "gh-pages": "^2.1.1",
     "jest": "^24.9.0",
     "ramda": "^0.26.1",
@@ -23,9 +35,6 @@
     "@types/styled-components": "^4.4.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6"
-  },
-  "scripts": {
-    "storybook": "start-storybook"
   },
   "author": "",
   "license": "ISC"
