@@ -33,8 +33,7 @@ interface ButtonInterface {
   children?: React.ReactNode;
   onClick: () => void;
 }
-
-function ButtonComponent(props: ButtonInterface) {
+function Button(props: ButtonInterface) {
   const { children, type, disabled, loading } = props;
   const CustomWrapper = styleMap[type];
   return (
@@ -44,10 +43,10 @@ function ButtonComponent(props: ButtonInterface) {
   );
 }
 
-ButtonComponent.defaultProps = {
+Button.defaultProps = {
   disabled: false,
   type: ButtonType.primary,
   loading: false,
 };
 
-export default React.memo(ButtonComponent);
+export default Button;

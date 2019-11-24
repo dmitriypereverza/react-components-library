@@ -137,6 +137,11 @@ export const TypographyTypes = {
 };
 
 interface TypographyInterface {
+  /**
+   * Value to display, either empty (" ") or "X" / "O".
+   *
+   * @default " "
+   **/
   className?: string;
   as?: keyof JSX.IntrinsicElements;
   type?: keyof typeof TypographyTypes;
@@ -147,7 +152,13 @@ interface TypographyInterface {
   hoverColor?: Colors;
 }
 
-function Typography({
+/**
+ * TicTacToe game cell. Displays a clickable button when the value is " ",
+ * otherwise displays "X" or "O".
+ */
+// Notice the named export here, this is required for docgen information
+// to be generated correctly.
+const Typography = ({
   as,
   className,
   styles,
@@ -156,7 +167,7 @@ function Typography({
   useDotes,
   hoverColor,
   color: colorProp,
-}: TypographyInterface) {
+}: TypographyInterface) => {
   const [typoRef, setTypoRef] = useState<HTMLElement>(null);
 
   return (
@@ -205,7 +216,7 @@ Typography.defaultProps = {
   type: "regularBody1",
 };
 
-export default React.memo(Typography);
+export default Typography;
 
 const StyledLink = styled(
   React.forwardRef((props: any, ref) => (

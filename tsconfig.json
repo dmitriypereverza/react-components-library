@@ -29,7 +29,10 @@
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "typeRoots": ["./node_modules/@types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
     "importHelpers": true,
     "reactNamespace": "",
     "experimentalDecorators": true,
@@ -41,5 +44,6 @@
     "isolatedModules": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "scripts"]
+  "exclude": [
+    "./node_modules", "build", "scripts"]
 }
