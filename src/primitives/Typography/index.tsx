@@ -153,11 +153,8 @@ interface TypographyInterface {
 }
 
 /**
- * TicTacToe game cell. Displays a clickable button when the value is " ",
- * otherwise displays "X" or "O".
+ * Какое-то описание для компонента
  */
-// Notice the named export here, this is required for docgen information
-// to be generated correctly.
 const Typography = ({
   as,
   className,
